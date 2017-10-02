@@ -26,9 +26,5 @@ Usage
 =====
 | Run `wingsum <UID>` where UID is the flighlog.org user ID.
 | Example output:
-| ◢■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■◣
-|               Wing                Time    Flights  
-|  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 
-|         Niviuk Koyot 3 28 Citrus   37:33        95 
-|  Skywalk Mescal 4 L (skulevinge)   01:35        17 
-| ◥■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■◤
+
+.. image:: wingsum1.png
