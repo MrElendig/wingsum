@@ -65,6 +65,10 @@ def main(uid):
 
     table = [[wing, i_to_hm(wings[wing][0]), wings[wing][1]] for wing in wings]
 
+    if not table:
+        print("No flights found for UID {}".format(uid), file=sys.stderr)
+        sys.exit(2)
+
     wn = max(len(r[0]) for r in table)
     widths = [wn, 7, 9]
 
