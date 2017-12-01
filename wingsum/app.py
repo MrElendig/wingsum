@@ -20,7 +20,7 @@ import sys
 import requests
 import lxml.html
 import click
-import tableprint
+import tabulate
 
 FL_URL = "http://no.flightlog.org/fl.html"
 
@@ -69,11 +69,8 @@ def main(uid):
         print("No flights found for UID {}".format(uid), file=sys.stderr)
         sys.exit(2)
 
-    wn = max(len(r[0]) for r in table)
-    widths = [wn, 7, 9]
 
-    tableprint.table(table, ["Wing", "Time", "Flights"], width=widths, style="block")
-
+    print(tabulate.tabulate(table, ["Wings", "Time", "Flights"]))
 
 if __name__ == "__main__":
     main()

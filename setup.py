@@ -32,5 +32,5 @@ setup(
         wingsum=wingsum.app:main
     """,
     python_requires = ">=3",
-    install_requires = ["requests", "lxml", "click", "setuptools", "tableprint"]
+    install_requires = ["requests", "lxml", "click", "setuptools", "tabulate"]
 )
