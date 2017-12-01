@@ -3,18 +3,26 @@
 wingsum \- Parses flighlog and sums up the flight time/count per wing.
 .SH SYNOPSIS
 .B wingsum
-[\fB\--version,\--help\fR]
+[\fB\--help\fR]
+[\fB\--version\fR]
+[\fB\-s,\--style=\fISTYLE\fR]
 .IR UID
 .SH DESCRIPTION
 .B wingsum
 Parses flightlog.org and sums up the flight time/count per wing and prints them in a ugly table.
+.SH ARGUMENTS
+.TP
+.BR UID
+The flightlog.org user ID.
 .SH OPTIONS
 .TP
-.BR UID\fR
-The flightlog.org user ID.
+.BR \--help
+Prints the help message.
 .TP
-.BR \--version\fR
+.BR \--version
 Prints the version.
 .TP
-.BR \--help\fR
-Prints the help message.
+.BR \-s,--style
+The table style to use; possible values are: 
+[\fBplain,simple,grid,fancy_grid,pipe,orgtbl,jira,presto,psql,rst,mediawiki,
+moinmoin,youtrack,html,latex,latex_raw,latex_booktabs,textile\fR]

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # wingsum: Parses flightlog and sums up the flight time/count per wing
-# Copyright (C) 2012  Øyvind 'Mr.Elendig' Heggstad
+# Copyright (C) 2018  Øyvind 'Mr.Elendig' Heggstad
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -23,6 +23,25 @@ import click
 import tabulate
 
 FL_URL = "http://no.flightlog.org/fl.html"
+TABLE_FORMATS = ["plain",
+        "simple",
+        "grid",
+        "fancy_grid",
+        "pipe",
+        "orgtbl",
+        "jira",
+        "presto",
+        "psql",
+        "rst",
+        "mediawiki",
+        "moinmoin",
+        "youtrack",
+        "html",
+        "latex",
+        "latex_raw",
+        "latex_booktabs",
+        "textile"
+        ]
 
 def hm_to_i(s):
     """'01:30' -> 90"""
@@ -44,8 +63,10 @@ def convf(f):
 
 @click.command()
 @click.version_option()
+@click.option("--style", "-s", default="simple", type=click.Choice(TABLE_FORMATS),
+        help="The table style to use")
 @click.argument("uid")
-def main(uid):
+def main(uid, style):
     """ Parses flightlog and sums up the flight time/count per wing
 
     UID: flightlog user ID"""
@@ -69,8 +90,8 @@ def main(uid):
         print("No flights found for UID {}".format(uid), file=sys.stderr)
         sys.exit(2)
 
+    print(tabulate.tabulate(table, ["Wings", "Time", "Flights"], tablefmt=style))
 
-    print(tabulate.tabulate(table, ["Wings", "Time", "Flights"]))
 
 if __name__ == "__main__":
     main()

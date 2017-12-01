@@ -20,7 +20,7 @@
 from setuptools import setup, find_packages
 setup(
     name = "wingsum",
-    version = '0.1',
+    version = '0.1.1',
     description = "Parses flighlog and sums up the flight time/count per wing",
     url = "https://github.com/MrElendig/wingsum",
     author = "Øyvind \"Mr.Elendig\" Heggstad",
