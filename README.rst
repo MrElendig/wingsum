@@ -14,7 +14,7 @@ Dependencies
 | requests
 | lxml
 | click
-| tableprint
+| tabulate
 | setuptools (for the setup.py)
 
 Instalation
