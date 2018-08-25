@@ -26,7 +26,7 @@ setup(
     author = "Øyvind \"Mr.Elendig\" Heggstad",
     author_email = "mrelendig@har-ikkje.net",
     license = "AGPLv3",
-    packages = find_packages("wingsum"),
+    packages = find_packages(),
     entry_points = """
         [console_scripts]
         wingsum=wingsum.app:main
