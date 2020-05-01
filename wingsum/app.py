@@ -22,7 +22,7 @@ import lxml.html
 import click
 import tabulate
 
-FL_URL = "http://no.flightlog.org/fl.html"
+FL_URL = "http://flightlog.org/fl.html"
 TABLE_FORMATS = ["plain",
         "simple",
         "grid",
